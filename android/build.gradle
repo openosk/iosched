@@ -27,9 +27,9 @@ repositories {
 
 android {
     compileSdkVersion lpreview ? "android-L" : 19
-    buildToolsVersion "20.0.0"
+    buildToolsVersion '20.0.0'
 
-    productFlavors { lpreview ? lpreview{} : classic{} }
+    productFlavors { lpreview ? lpreview {} : classic {} }
 
     defaultConfig lpreview ? {} : {
         // Non-L-preview configuration
@@ -39,16 +39,16 @@ android {
 
     signingConfigs {
         debug {
-            storeFile file("../android/debug.keystore")
-            storePassword "android"
-            keyAlias "androiddebugkey"
-            keyPassword "android"
+            storeFile file('../android/debug.keystore')
+            storePassword 'android'
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
         }
         release {
-            storeFile file("../android/debug.keystore")
-            storePassword "android"
-            keyAlias "androiddebugkey"
-            keyPassword "android"
+            storeFile file('../android/debug.keystore')
+            storePassword 'android'
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
         }
     }
 
@@ -74,8 +74,9 @@ android {
 }
 
 dependencies {
-    wearApp project(':Wearable')
-    compile 'com.google.android.gms:play-services:5+' 
+//    wearApp project(':Wearable')
+
+    compile 'com.google.android.gms:play-services:5.+'
     compile 'com.android.support:support-v13:20.+'
     compile 'com.android.support:support-v4:20.+'
     compile 'com.google.android.apps.dashclock:dashclock-api:+'
